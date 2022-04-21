@@ -1,19 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var $header = document.getElementById('header');
-var $previousScroll = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    let header = document.getElementById('header');
 
 
-window.addEventListener('scroll', scroll);
+    window.addEventListener('scroll', scroll);
 
 
-function scroll() {
-    var $scrollDistance = $(this).scrollTop();
-    
-    if ($scrollDistance >= 150) {
-        $header.classList.add('change-header-color');
-    } else {
-        $header.classList.remove('change-header-color');
+    function scroll() {
+
+        let scrollDistance = window.scrollY;
+
+        if (scrollDistance >= 100) {
+            header.classList.add('change-header-color');
+        } else {
+            header.classList.remove('change-header-color');
+        }
     }
-    $previousScroll = $scrollDistance;
-}
 });

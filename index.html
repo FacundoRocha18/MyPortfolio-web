@@ -23,37 +23,31 @@
 
         <!-- Site Menu -->
         <div class="navigation">
-            <nav id="menu">
-                <div class="menu-items">
-                    <ul>
+            <nav class="menu-items" id="menu">
+                <ul>
 
-                        <li><a href="#first-article">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li class="contact-nav-btn"><a href="#contact">Contact</a></li>
-    
-                    </ul>
-                </div>
-                <div class="socialmedia-menu-wrapper">
-                    <div class="socialmedia-title">
-                        <h4 class="center-title">My socialmedia</h4>
-                    </div>
-                    <div class="socialmedia-menu-items">
-                        <ol>
-                            <li><a href="#"><i class="fab fa-whatsapp icon"></i></a></li>
-                            <li><a href="#"><i class="far fa-envelope icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- <div class="mode-switch">
-                    <p>Theme:</p>
-                    <input type="checkbox" name="">
-                </div> -->
+                    <li><a href="#first-article">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li class="contact-nav-btn"><a href="#contact">Contact</a></li>
+
+                </ul>
             </nav>
+            <div class="socialmedia-menu-wrapper">
+                <div class="socialmedia-title">
+                    <h4 class="center-title">My socialmedia</h4>
+                </div>
+                <div class="socialmedia-menu-items">
+                    <ol>
+                        <li><a href="#"><i class="fab fa-whatsapp icon"></i></a></li>
+                        <li><a href="#"><i class="far fa-envelope icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                    </ol>
+                </div>
+            </div>
         </div>
         <!-- Site main content -->
         <div class="website-main-content main">
@@ -62,8 +56,8 @@
                 <script src="js/scroll.js"></script>
                 <div class="header-content">
                     <div class="header-title">
-                        <a href="#">
-                            <h1 class="title"><span>MY</span>PORTFOLIO</h1>
+                        <a href="#" class="title">
+                            <h1><span>FR</span>DESIGN</h1>
                         </a>
                     </div>
                     <div class="toggle-btn toggle">
@@ -85,7 +79,7 @@
                             <h3>Web designer</h3>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- Site about me -->
                 <hr class="destination" id="about">
@@ -94,28 +88,24 @@
                         <h2>Let me introduce myself</h2>
                     </div>
                     <div class="presentation-wrapper">
-                        <div class="about-text-wrapper">
-                            <div class="name-wrapper">
-                                <h3>About me</h3>
-                            </div>
-                            <div class="text-wrapper">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut arcu consequat
-                                    libero
-                                    accumsan placerat a sit amet lacus. Phasellus fringilla, erat eget elementum
-                                    rhoncus,
-                                    tortor eros lobortis augue, ut dignissim lacus neque sit amet odio. Duis quis orci
-                                    odio.
-                                    Quisque accumsan lacus nisi, eu condimentum ligula varius sit amet. Cras accumsan
-                                    urna
-                                    sit amet risus pretium, ac dignissim lacus convallis. Suspendisse quis semper justo.
-                                </p>
-                            </div>
-                            <div class="btn-wrapper">
-                                <li><a href="/files/Facundo Rocha CV.pdf" target="_blank" class="link-cv-btn">My
-                                        complete C.V.</a></li>
-                            </div>
+                        <div class="name-wrapper">
+                            <h3>About me</h3>
                         </div>
+                        <div class="text-wrapper">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut arcu consequat
+                                libero
+                                accumsan placerat a sit amet lacus. Phasellus fringilla, erat eget elementum
+                                rhoncus,
+                                tortor eros lobortis augue, ut dignissim lacus neque sit amet odio. Duis quis orci
+                                odio.
+                                Quisque accumsan lacus nisi, eu condimentum ligula varius sit amet. Cras accumsan
+                                urna
+                                sit amet risus pretium, ac dignissim lacus convallis. Suspendisse quis semper justo.
+                            </p>
+                        </div>
+                        <a href="/files/Facundo Rocha CV.pdf" target="_blank" class="link-cv-btn">My
+                            resumee</a>
                     </div>
                 </div>
                 <!-- services carousel -->
@@ -377,7 +367,7 @@
                         <h4>Contact me</h4>
                     </div>
                     <div class="contact-form">
-                        <form action="/my-handling-form-page" method="post">
+                        <form onsubmit="SendMessage(); reset();">
                             <div class="input-box">
                                 <input type="text" name="user_name" id="name" required="required">
                                 <span>Your full name</span>
@@ -400,8 +390,8 @@
                 <footer class="website-footer">
                     <div class="footer-content">
                         <div class="footer-title">
-                            <a href="#">
-                                <h1 class="title"><span>MY</span>PORTFOLIO</h1>
+                            <a href="#" class="title">
+                                <h1><span>FR</span>DESIGN</h1>
                             </a>
                         </div>
                         <div class="copyright-wrapper">
@@ -414,13 +404,32 @@
         </div>
 
     </div>
-    <script type="text/javascript">
-        /* $(document).ready(function () {
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        
+        
+        function SendMessage () {
 
-            $('#menu_on').click(function () {
-                $('body').toggleClass('visible_menu');
-            })
-        }); */
+            Email.send({
+                SecureToken: '8c2694c0-f3e2-4b9c-a77d-a9be2044dd93',
+                /* Host: "smtp.gmail.com",
+                Username: "facurocha1810@gmail.com",
+                Password: "montuysatet1810", */
+                To: 'facundo.rocha@outlook.com',
+                From: document.querySelector('#email').value,
+                Subject: "Nuevo mensaje",
+                Body: `Nombre: ${document.querySelector('#name').value}`
+                    + `<br> Email: ${document.querySelector('#email').value}`
+                    + `<br> Mensaje: ${document.querySelector('#message').value}`
+            }).then(
+                message => {
+                    console.log(message);
+                    alert(message);
+                }
+            );
+        }
+    </script>
+    <script type="text/javascript">
 
         let toggle = document.querySelector('.toggle');
         let topbar = document.querySelector('.topbar');
